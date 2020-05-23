@@ -1,0 +1,11 @@
+C:\Users\pkumar03\Source\Repos\EventHandlerDemo\bin\Debug\netcoreapp2.1\EventHandlerDemo.deps.json
+C:\Users\pkumar03\Source\Repos\EventHandlerDemo\bin\Debug\netcoreapp2.1\EventHandlerDemo.runtimeconfig.json
+C:\Users\pkumar03\Source\Repos\EventHandlerDemo\bin\Debug\netcoreapp2.1\EventHandlerDemo.runtimeconfig.dev.json
+C:\Users\pkumar03\Source\Repos\EventHandlerDemo\bin\Debug\netcoreapp2.1\EventHandlerDemo.dll
+C:\Users\pkumar03\Source\Repos\EventHandlerDemo\bin\Debug\netcoreapp2.1\EventHandlerDemo.pdb
+C:\Users\pkumar03\Source\Repos\EventHandlerDemo\obj\Debug\netcoreapp2.1\EventHandlerDemo.csprojAssemblyReference.cache
+C:\Users\pkumar03\Source\Repos\EventHandlerDemo\obj\Debug\netcoreapp2.1\EventHandlerDemo.csproj.CoreCompileInputs.cache
+C:\Users\pkumar03\Source\Repos\EventHandlerDemo\obj\Debug\netcoreapp2.1\EventHandlerDemo.AssemblyInfoInputs.cache
+C:\Users\pkumar03\Source\Repos\EventHandlerDemo\obj\Debug\netcoreapp2.1\EventHandlerDemo.AssemblyInfo.cs
+C:\Users\pkumar03\Source\Repos\EventHandlerDemo\obj\Debug\netcoreapp2.1\EventHandlerDemo.dll
+C:\Users\pkumar03\Source\Repos\EventHandlerDemo\obj\Debug\netcoreapp2.1\EventHandlerDemo.pdb
