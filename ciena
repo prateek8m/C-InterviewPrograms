@@ -1,0 +1,465 @@
+Generics
+
+
+stack and heap
+normalization
+puzzles
+linq
+ref complete
+Icomparable
+Rest Api
+CLR
+how data stored in memory
+Inside of overriding 
+overriding again.
+sql queries
+SELECT e.name, m.name FROM Employee e, Employee m WHERE e.mgr_id = m.emp_id;
+
+Ajile
+	plan 
+	build
+	test
+	review
+
+	product manager
+	scrum master
+	developer
+
+	sprint planning
+	daily scrum/meeting
+	sprint review
+
+IComparable
+
+If currentinstance less then coming return -1;                                
+else if greater return 1;
+else return 0;
+
+ public int CompareTo(Employee other)
+    {
+        // Alphabetic sort if salary is equal. [A to Z]
+        if (this.Salary == other.Salary)
+        {
+            return this.Name.CompareTo(other.Name);
+        }
+        // Default to salary sort. [High to low]
+        return other.Salary.CompareTo(this.Salary);
+    }
+
+
+
+Think of the Stack as a series of boxes stacked one on top of the next.  We keep track of what's going on in our application by stacking another box on top every time we call a method (called a Frame).  We can only use what's in the top box on the stack.  When we're done with the top box (the method is done executing) we throw it away and proceed to use the stuff in the previous box on the top of the stack. 
+
+The Heap is similar except that its purpose is to hold information (not keep track of execution most of the time) so anything in our Heap can be accessed at  any time.
+
+Memory Management: stack, heap, garbage collector,generations
+
+Database
+
+variable : reference type , out variable,
+
+C# basics : CLR, compiler, JIT ,MSIL ,
+
+design pattern : that you know , explanation of one or two
+
+oops: Interface diamond problem, overriding, overloading, upcasting , downcasting, boxing , unboxing ,interface,encapsulation, virtual keyword,event adn delegates , reflection
+
+Rest api and web api Basics:difference b/w post put similar to this , stateless 
+
+MVC: basics ,
+
+collections in c#: generic , hashtable, arraylist , dictionary
+extra: indexers,generics
+puzzles:
+
+Upcasting And Downcasting
+		upcasting allowed moving form specializtion to generalization.]
+
+
+		Class Person
+		{
+		   string getname();
+		   
+		}
+		class student : Person{
+		  string getname();
+		  int getroll();
+
+		}
+		Person p = new person();
+
+		student s= new student();
+
+		p=s ///possible  we can call p.getname() and that will be present as .
+
+		but if
+		s=p;  // and as s is of student type we call s.getroll()  and thats gives an error as we don't have that method in Person table;
+		rhs or object decide what all types of methods an object can have 
+		while LHS decide what all methods can be invoked.
+
+		upcasting is possible as we are moving from specializtion to generalization.
+		while downcasting means we are moving from generalization to specializtion.
+		Its like a surgeon is also a doctor but a doctor cannot be a surgeon.
+
+Boxing And Unboxing;
+		int s=10;
+		object obj= s. // boxing
+
+		while
+		int s= (int)obj //unboxing
+
+		 value type to the type object or to any interface type implemented by this value type //boxing 
+		 Unboxing extracts the value type from the object.//unboxing
+		 
+		Boxing is implicit; unboxing is explicit
+
+Diamond Problem:
+		interface A{
+		 void run();
+		}
+		interface B
+		{
+		 void run();
+		}
+
+		class test: A,B
+		{
+		   public void run()
+		   {
+			 //both run methods of interface have similar implementation.
+		   }
+		}
+		test obj= new test();
+		obj.run();
+		//else you can give separate implemetaion by 
+
+		class test :A,Basics{
+		   void A.run()
+		   {
+		   
+		   }
+		   void B.run()
+		   {
+		   
+		   }
+		}
+
+		A obj = new test();
+		A.run();
+
+		B obj1= new test();
+		obj1.run();
+		
+JIT compiler
+		(1) PRE JIT Compiler :
+
+		           Pre-JIt  compiler compiles complete source(MSIL)code to Native code in a single Compilation.
+
+		(1) ECONO JIT Compiler :
+
+		            This compiler compiles only MSIL code of those methods that are called at Runtime.
+
+		3) NORMAL JIT compiler:
+
+		             This compiler compiles only MSIL code of those methods that are called at Runtime and that converted (native) code is stored in Cache.This happens because,when these methods called again it will retrieve code from cache itself without sending request to CLR.Thus,in turn saves much of Executiom time.
+
+Differenece between put and post .
+					 Idempotent
+					 Idempotence is the property of certain operations in mathematics and computer science, that can be applied multiple times without changing the result beyond the initial application
+					 put is idempotent while post not
+					 the PUT method is used to create or overwrite a resource at a particular URL that is known by the client.
+					 Rest is STateless as nothing about the state of previous request is stored in server 
+					 Statelessness helps in scaling the APIs to millions of concurrent users by deploying it to multiple servers. Any server can handle any request because there is no session related dependency.
+					 Being stateless makes REST APIs less complex – by removing all server-side state synchronization logic
+
+					 easy to cache:Cacheable – Cache constraints require that the data within a response to a request be implicitly or explicitly labeled as cacheable or non-cacheable. If a response is cacheable, then a client cache is given the right to reuse that response data for later, equivalent requests.
+
+Out and Ref
+					Both required to pass by reference
+					diff in case of out data send from calling function to caller function ,
+					so need to be initialized in calli function.
+
+					if we are passing any method parameter (either value type or reference type) using ref parameter, any change in the parameter value inside the method will be reflected back into the actual value of parameter
+
+Association,Aggregation and Composition.
+		Iheritence: parent child
+		has a relationship: Association , both have separate lifetime.
+		Aggregation: child , single owner of the object
+		Composition: both entity dependent on each other
+
+Threading nd wpf
+
+
+Design Patterns
+		Structural Design Patterns
+		Structural patterns explain how to assemble objects and classes into larger structures while keeping these structures flexible and efficient.
+
+		Creational patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code.
+
+		Behavioral design patterns are concerned with algorithms and the assignment of responsibilities between objects.
+
+		Adapter pattern: structural   DS
+		It acts as a bridge between two incompatible interfaces.It involves a single class called adapter which is responsible for communication between two independent or incompatible interfaces.
+
+		public class client
+		{
+			private Itarget target;
+			public client(Itarget target)
+			{
+			this.target=target;
+			}
+
+
+			public void MakeRequest()
+			{
+				target.MethodA();
+			}
+		}
+
+		public interface Itarget
+		{
+			void MethodA();
+		}
+
+		public class Adapter : Adaptee,Itarget
+		{
+			public void MethodA()
+			{
+		       MethodB();
+			}
+		}
+
+		public class Adaptee
+		{
+			public void MethodB()
+			{
+			   console.writeline("MethodB is called");
+			}
+		}
+		//If you don't have access to change Itarget interface here or coreesponding implementation. 
+
+		Observer Pattern : Behavioural
+		4 classes
+		1:subject
+		2:ConcreteSubject
+		3:Observer
+		4:ConcreteObserver
+
+		public abstract class Subject
+		{
+			list<observer> ls= new list<observer>();
+
+			void add (observer obs)
+			{
+
+			}
+
+			void  RemoveObserver(Observer obs)
+			{
+
+			}
+			void Notify
+			{
+			   foreach(obj in observerlist)
+			   {
+			   obj.update();
+			   }
+			}
+		}
+
+		public class ConcreteSubject:Subject
+		{
+			private String state;
+			public string GetState()
+			{
+			return state;
+			}
+			public void setstate(string newstate)
+			{
+			state=newstate;
+			Notify();
+			}
+		}
+
+		public interface Iobserver
+		{
+			void Update();
+		}
+
+		public class COncurrentObserver: Iobserver
+		{
+			private ConcreteSubject subject;
+
+			void ConcreteObserver(ConcreyteSubject sub)
+			{
+			subject=sub;
+			}
+
+			public void Update()
+			{
+			 string subjectState= subject>getState();
+			 console.log("updated");
+			}
+		}
+
+		######################################################################
+
+		Strategy pattern : behavioural DS
+
+		public class Client
+		{
+		 public IStrategy Strategy { get; set; }
+
+		 public void CallAlgorithm()
+		 {
+		 Console.WriteLine(Strategy.Algorithm());
+		 }
+		}
+
+		public interface IStrategy
+		{
+		 string Algorithm();
+		}
+
+		public class ConcreteStrategyA : IStrategy
+		{
+		 public string Algorithm()
+		 {
+		 return "Concrete Strategy A";
+		 }
+		}
+
+		public class ConcreteStrategyB : IStrategy
+		{
+		 public string Algorithm()
+		 {
+		 return "Concrete Strategy B";
+		 }
+		}
+
+
+Await
+       The fact that await frees the thread up to do other things means that it can remain responsive to additional user actions and input. But, even if there is no graphical user interface, we can see the advantage of freeing up a thread. As was demonstrated in previous guides in this series, a console application can also display progress independent of execution in the form of a text-based dashboard; you could extend that idea to periodically check for keyboard input. In the case of ASP.NET, freeing up a thread potentially means greater scalability, allowing a single server to handle more requests concurrently than it otherwise could. It can, therefore, be very advantageous to write non-blocking code with await.
+
+
+Nested Class:
+		Nested class have special access to private members of parent class through instance of parent class.
+
+		Polymorphism:
+		method hiding:
+		If same method signature in all chid and base class and we are calling 
+		chil obj = new child();
+		obj.meth() //it will call child class method thus hiding the base class method.
+		but if the referfence type is of abse class like
+		Base obj = new child();
+		obj.meth();//actually base method will be called.
+
+		polymorphism allows you to invoke derived class methods using a base class reference during run time.
+		Mixing Method Overriding and Method Hiding
+		This is required when you want to further override the derived class method into next level.
+
+ExtensionMethods:
+Extension methods enable you to "add" methods to existing types without creating a new derived type, recompiling, or otherwise modifying the original type. Extension methods are static methods, but they're called as if they were instance methods on the extended type.
+
+Garbage collection
+The assumption is that the newer an object is, the shorter its lifetime is expected to be. Hence, we hope that, collecting and compacting the Generation 0 objects would free enough space on the heap to accommodate the new object.
+
+
+Pass by Ref for reference type objects //Must check
+
+
+
+1.	Given a string, write a function to find out if it’s characters can be rearranged to form a palindrome. For example:
+For inputString = "aabb", the output should be
+palindromeRearranging(inputString) = true.
+
+
+bool checkpallindrome(string inputString)
+{
+	int n= inputString.count();
+    int
+	if(n%2==0)//even
+	{
+       
+	}
+	else
+	{
+
+	}
+}
+
+
+class Twostack
+{
+	int top1;
+	int top2;
+	int *arr;
+	int size;
+
+	Twostack(int _size)
+	{
+		size=_size;
+		arr= new int[_size];
+		top1=-1;
+		top2=_size;
+	}
+
+	void push1(int x)
+	{
+		if(top1<top2-1)
+		{
+			//push is feasible
+			arr[++top1]=x;
+
+		}
+		else
+		{
+			throw new exception("stack1 is full");
+		}
+
+	}
+	void push2(int y)
+	{
+		if(top2>top1+1)
+		{
+			arr[--top2]=y;
+
+		}
+		else
+		{
+			throw new exception("stack2 is full");
+		}
+
+	}
+
+	int pop1()
+	{
+		if(top1==-1)
+		{
+			return 0; //or throw exception
+		}
+		else
+		{
+			int val= arr[top1];
+			top1--;
+			return val;
+		}
+
+	}
+
+	int pop2()
+	{
+		if(top2==size)
+		{
+			return 0; //or throw exception
+		}
+		else
+		{
+			int val= arr[top2];
+			top1++;
+			return val;
+		}
+
+	}
+
+}
