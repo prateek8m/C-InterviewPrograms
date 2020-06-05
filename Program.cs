@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharpInterviewPrograms;
+using System;
 
 
 namespace EventHandlerDemo
@@ -43,8 +44,25 @@ namespace EventHandlerDemo
             //EmptyClass emptyClass = new EmptyClass();
             //Console.WriteLine(emptyClass);
 
-            Generic generic = new Generic();
-            generic.check();
+            //Generic generic = new Generic();
+            //generic.check();
+
+            //SemaphoreCheck semaphore = new SemaphoreCheck();
+            //semaphore.check();
+
+            //Linq linq = new Linq();
+            //linq.check();
+
+            //LinkedList root = new LinkedList(1);
+            //LinkedList head = root;
+            //root = root.InsertNewNode(root,2);
+            //root = root.InsertNewNode(root, 3);
+            //root.Print(head);
+            //head=root.Reverse(head);
+            //head.Print(head);
+
+            checkpallindrone checkpallindrone = new checkpallindrone();
+            checkpallindrone.check();
 
 
             Console.ReadLine();

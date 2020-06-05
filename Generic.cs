@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -13,6 +14,18 @@ namespace EventHandlerDemo
         {
             arr = new object[size];
 
+        }
+
+        public object this[int index]
+        {
+            get
+            {
+                return arr[index];
+            }
+            set
+            {
+                arr[index] = value;
+            }
         }
         public void insert(object val)
         {
@@ -42,6 +55,25 @@ namespace EventHandlerDemo
             }
         }
 
+        //public int CompareTo(object obj)
+        //{
+        //    NonGenericList nonGenericList = obj as NonGenericList;
+
+        //    int m = nonGenericList.size;
+        //    int i = 0;
+        //    while(i<size && i<m)
+        //    {
+        //        if(nonGenericList[i]<arr[i])
+        //        {
+
+        //        }
+        //    }
+        //}
+
+        IEnumerator  GetEnumerator()
+        {
+            return (IEnumerator)GetEnumerator();
+        }
     }
     class MyGenericList<T>
     {
