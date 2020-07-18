@@ -16,26 +16,26 @@ namespace CSharpInterviewPrograms
             return a + b;
         }
 
-        public int subtract(int a, int b)
+        public int Subtract(int a, int b)
         {
             return a - b;
         }
 
-        public void action(int a, int b)
+        public void Action(int a, int b)
         {
             Console.WriteLine(a);
         }
         public void check()
         {
             calculation calculation = sum;
-            calculation calculation2 = subtract;
+            calculation calculation2 = Subtract;
             Console.WriteLine(calculation(2,3));
             Console.WriteLine(calculation2(3,4));
 
             Func<int, int, int> add = sum;
             add(1, 2);
 
-            Action<int, int> actio = action;
+            Action<int, int> actio = Action;
             actio(4, 5);
         }
 

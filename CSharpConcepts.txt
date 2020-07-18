@@ -1,0 +1,8 @@
+﻿Attributes:
+An attribute is a declarative tag that is used to convey information to runtime
+about the behaviors of various elements like classes, methods, structures, enumerators, assemblies etc. 
+in your program.
+
+iDISPOSABLE
+If disposing equals true, the method has been called directly or indirectly by a user's code. Managed and unmanaged resources can be disposed.
+If disposing equals false, the method has been called by the runtime from inside the finalizer, and you should not reference other objects. Only unmanaged resources can be disposed.

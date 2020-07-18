@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EventHandlerDemo
 {
-    class NonGenericList
+    class NonGenericList :IComparable,IEnumerable
     {
         int size = 10;
         int curr_index = 0;
@@ -73,6 +73,17 @@ namespace EventHandlerDemo
         IEnumerator  GetEnumerator()
         {
             return (IEnumerator)GetEnumerator();
+        }
+
+        public int CompareTo(object obj)
+        {
+            NonGenericList nonGenericList = obj as NonGenericList;
+            return nonGenericList.CompareTo(this);
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
     class MyGenericList<T>

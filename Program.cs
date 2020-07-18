@@ -61,10 +61,28 @@ namespace EventHandlerDemo
             //head=root.Reverse(head);
             //head.Print(head);
 
-            checkpallindrone checkpallindrone = new checkpallindrone();
-            checkpallindrone.check();
+            //checkpallindrone checkpallindrone = new checkpallindrone();
+            //checkpallindrone.check();
+
+            //customsort customsort = new customsort();
+            //customsort.check();
+
+            //SerialTest st = new SerialTest();
+            //st.SerializeNow();
+            //st.DeSerializeNow();
+
+            //Test test = new Test();
+            //test.set();
+
+            //TakeInputs takeInputs = new TakeInputs();
+            //takeInputs.test();
 
 
+            //TaskDemo taskDemo = new TaskDemo();
+            //taskDemo.CreateTask();
+
+            Partitioner1 partitioner1 = new Partitioner1();
+            partitioner1.partitionParallelThread();
             Console.ReadLine();
         }
 

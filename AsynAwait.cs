@@ -9,18 +9,19 @@ namespace EventHandlerDemo
     class AsynAwait
     {
 
-        public async Task check()
-        {
-            Console.WriteLine("before Await");
-            await asynmethod();
+        //public async void check()
+        //{
+        //    Console.WriteLine("before Await");
+        //    await asynmethod();
 
-            Console.WriteLine("After await");
-        }
+        //    Console.WriteLine("After await");
+        //}
 
-        public async Task<string> asynmethod()
-        {
-            Thread.Sleep(50000);
-            return "Ram";
-        }
+        //public async Task<string> asynmethod()
+        //{
+        //    Thread.Sleep(50000);
+        //    Thread thread = new Thread(ThreadStart.)
+        //    return "Ram";
+        //}
     }
 }
