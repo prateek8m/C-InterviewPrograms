@@ -5,6 +5,10 @@ using System.Text;
 
 namespace CSharpInterviewPrograms
 {
+
+    // Delegates are used to define callback methods and implement event handling
+    //The basic difference between Func and Action delegates is that while the former is used for delegates that return value, the latter can be used for those delegates in which you don't have any return value.
+    //A Predicate is a delegate that accepts one or more generic parameters and returns a Boolean value — you can assume it is something like Func<T,bool>.
     class Delegates
     {
 

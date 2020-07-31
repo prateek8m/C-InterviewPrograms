@@ -81,8 +81,11 @@ namespace EventHandlerDemo
             //TaskDemo taskDemo = new TaskDemo();
             //taskDemo.CreateTask();
 
-            Partitioner1 partitioner1 = new Partitioner1();
-            partitioner1.partitionParallelThread();
+            //Partitioner1 partitioner1 = new Partitioner1();
+            //partitioner1.partitionParallelThread();
+
+            VariablesTypes variablesTypes = new VariablesTypes();
+            variablesTypes.Test();
             Console.ReadLine();
         }
 
@@ -90,7 +93,10 @@ namespace EventHandlerDemo
 
     class Encoder
     {
-        public  delegate void OnecodingNotify(EventArgs eventArgs);
+
+        //Events enable a class or object to notify other classes or objects when something of interest occurs. 
+        //The class that sends (or raises) the event is called the publisher and the classes that receive (or handle) the event are called subscribers.
+        public delegate void OnecodingNotify(EventArgs eventArgs);
         public event OnecodingNotify EncoderEvent;
         public void Doencoding()
         {

@@ -14,6 +14,12 @@ namespace CSharpInterviewPrograms
             Console.WriteLine(m);
 
                 Console.ReadLine();
+
+            /*
+             * string in=Console.ReadLine();
+             * string [] input = in.split(" ");
+             * 
+             * */
         }
 
     }

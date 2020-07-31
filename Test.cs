@@ -33,9 +33,11 @@ namespace CSharpInterviewPrograms
 
         public void set()
         {
-            HashSet<int> hs = new HashSet<int>();
-            hs.Add(1);
-            hs.Add(1);
+            HashSet<int> hs = new HashSet<int>
+            {
+                1,
+                1
+            };
             Console.WriteLine(hs.Count);
 
             

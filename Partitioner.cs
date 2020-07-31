@@ -11,7 +11,7 @@ namespace CSharpInterviewPrograms
     {
         public void partitionParallelThread()
         {
-            var source = Enumerable.Range(0, 100000).ToArray();
+            var source = Enumerable.Range(0, 100).ToArray();
 
             var rangePartitioner = Partitioner.Create(0, source.Length);
 
