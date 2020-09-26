@@ -27,6 +27,7 @@ namespace EventHandlerDemo
             HashSet<string> hs = new HashSet<string>();
             hs.Add("asda");
             hs.Add("asda");
+            
             Console.WriteLine(hs.Count);
 
 

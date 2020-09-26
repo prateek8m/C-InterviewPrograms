@@ -6,3 +6,13 @@ in your program.
 iDISPOSABLE
 If disposing equals true, the method has been called directly or indirectly by a user's code. Managed and unmanaged resources can be disposed.
 If disposing equals false, the method has been called by the runtime from inside the finalizer, and you should not reference other objects. Only unmanaged resources can be disposed.
+
+
+Locking discipline
+A locking discipline is a strategy for ensuring that synchronized code is threadsafe. We must satisfy two conditions:
+
+Every shared mutable variable must be guarded by some lock. The data may not be read or written except inside a synchronized block that acquires that lock.
+
+If an invariant involves multiple shared mutable variables (which might even be in different objects), then all the variables involved must be guarded by the same lock. Once a thread acquires the lock, the invariant must be reestablished before releasing the lock.
+
+The monitor pattern as used here satisfies both rules. All the shared mutable data in the rep — which the rep invariant depends on — are guarded by the same lock.

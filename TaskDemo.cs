@@ -13,12 +13,26 @@ namespace CSharpInterviewPrograms
         {
             Thread t = new Thread(() =>
             {
+                for (int i = 0; i < 10; i++)
+                {
+                    if(i%2!=0)
+                    {
+                        Console.WriteLine(i);
+                    }
+                }
                 Console.WriteLine("thread1");
             });
 
             Thread t2 = new Thread(() =>
             {
-                Console.WriteLine("thread1");
+                for (int i = 0; i < 10; i++)
+                {
+                    if(i%2==0)
+                    {
+                        Console.WriteLine(i);
+                    }
+                }
+                Console.WriteLine("thread2");
             });
 
             t.Start();

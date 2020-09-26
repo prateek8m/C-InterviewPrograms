@@ -715,6 +715,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://artifactory.factset.com/artifactory/api/nuget/hyd-sets": {},
+        "http://artifactory.factset.com/artifactory/api/nuget/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

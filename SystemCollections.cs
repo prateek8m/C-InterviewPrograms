@@ -15,6 +15,13 @@ namespace EventHandlerDemo
             Hashtable hashtable = new Hashtable();
             hashtable.Add("a", 1);
             hashtable.Add(1, "a");
+            hashtable.Contains("a");
+            int h=hashtable.Count;
+            hashtable.Clear();
+            hashtable.ContainsValue(1);
+
+
+
             Console.WriteLine(hashtable[1]);
 
             Queue queue = new Queue();
@@ -22,6 +29,9 @@ namespace EventHandlerDemo
             queue.Enqueue(3);
             queue.Dequeue();
             queue.Peek();
+            int o=queue.Count;
+            //var it=queue.GetEnumerator();
+            
 
 
             Stack stack = new Stack();
@@ -33,6 +43,8 @@ namespace EventHandlerDemo
             sortedList.Add(1, "ew");
             sortedList.Add(4, "ad");
             Console.WriteLine(  sortedList.GetByIndex(1));
+
+            
 
         }
 

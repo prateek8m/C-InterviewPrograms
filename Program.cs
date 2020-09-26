@@ -48,7 +48,7 @@ namespace EventHandlerDemo
             //generic.check();
 
             //SemaphoreCheck semaphore = new SemaphoreCheck();
-            //semaphore.check();
+            //semaphore.check);
 
             //Linq linq = new Linq();
             //linq.check();
@@ -79,13 +79,19 @@ namespace EventHandlerDemo
 
 
             //TaskDemo taskDemo = new TaskDemo();
-            //taskDemo.CreateTask();
+            //taskDemo.Mutithreads();
 
             //Partitioner1 partitioner1 = new Partitioner1();
             //partitioner1.partitionParallelThread();
 
-            VariablesTypes variablesTypes = new VariablesTypes();
-            variablesTypes.Test();
+            //Datatypes datatypes = new Datatypes();
+            //datatypes.test();
+
+            //VariablesTypes variablesTypes = new VariablesTypes();
+            //variablesTypes.Test();
+
+            SynchronizingBetweenThreadsExample synchronizingBetweenThreadsExample = new SynchronizingBetweenThreadsExample();
+            synchronizingBetweenThreadsExample.Test();
             Console.ReadLine();
         }
 
