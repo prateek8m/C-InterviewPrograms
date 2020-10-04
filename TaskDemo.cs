@@ -46,39 +46,40 @@ namespace CSharpInterviewPrograms
 
         public async void CreateTask()
         {
-            List<Task<string>> ls = new List<Task<string>>();
-            ls.Add(Task<string>.Run(() =>
+            List<Task<string>> ls = new List<Task<string>>
             {
-                Thread.Sleep(5000);
-                return "thread1";
-            }));
+                Task<string>.Run(() =>
+                {
+                    Thread.Sleep(5000);
+                    return "thread1";
+                }),
 
-            ls.Add(Task<string>.Run(() =>
-            {
-                Thread.Sleep(2000);
-                return "thread2";
-            }));
+                Task<string>.Run(() =>
+                {
+                    Thread.Sleep(2000);
+                    return "thread2";
+                }),
 
-            ls.Add(Task<string>.Run(() =>
-            {
-                Thread.Sleep(3000);
-                return "thread3";
-            }));
+                Task<string>.Run(() =>
+                {
+                    Thread.Sleep(3000);
+                    return "thread3";
+                }),
 
-            ls.Add(Task<string>.Run(() =>
-            {
-                Thread.Sleep(4000);
-                return "thread4";
-            }));
+                Task<string>.Run(() =>
+                {
+                    Thread.Sleep(4000);
+                    return "thread4";
+                }),
 
-            ls.Add(Task<string>.Run(() =>
-            {
-                Thread.Sleep(3500);
-                return "thread5";
-            }));
+                Task<string>.Run(() =>
+                {
+                    Thread.Sleep(3500);
+                    return "thread5";
+                })
+            };
 
             //var res = await Task.WhenAll(ls);
-
             //for (int i = 0; i < ls.Count; i++)
             //{
             //    Console.WriteLine(res[i]);

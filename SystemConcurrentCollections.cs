@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 
 namespace EventHandlerDemo
 {
@@ -21,6 +22,14 @@ namespace EventHandlerDemo
             bc.Add(1);
             bc.TryAdd(3);
 
+
+            List<List<string>> ls = new List<List<string>>();
+            ls.Add(new List<string> { "sda", "shagv" });
+            ls.Add(new List<string> { "asda", "xvz" });
+            //ls.Sort()
+
+
+            string[] s = new string[] { "sda" };
 
         }
     }

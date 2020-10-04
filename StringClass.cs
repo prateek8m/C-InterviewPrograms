@@ -27,6 +27,9 @@ namespace CSharpInterviewPrograms
             Char.ToLower('S');
             Char.ToUpper('s');
 
+            char[] chararray = s.ToCharArray();
+            
+            string backtostring = new string(chararray);
             
         }
     }

@@ -50,8 +50,8 @@ namespace EventHandlerDemo
             //SemaphoreCheck semaphore = new SemaphoreCheck();
             //semaphore.check);
 
-            //Linq linq = new Linq();
-            //linq.check();
+            Linq linq = new Linq();
+            linq.UpperCaseLetter();
 
             //LinkedList root = new LinkedList(1);
             //LinkedList head = root;
@@ -90,8 +90,10 @@ namespace EventHandlerDemo
             //VariablesTypes variablesTypes = new VariablesTypes();
             //variablesTypes.Test();
 
-            SynchronizingBetweenThreadsExample synchronizingBetweenThreadsExample = new SynchronizingBetweenThreadsExample();
-            synchronizingBetweenThreadsExample.Test();
+            //SynchronizingBetweenThreadsExample synchronizingBetweenThreadsExample = new SynchronizingBetweenThreadsExample();
+            //synchronizingBetweenThreadsExample.printingOddNumbersFromtwothreadsInsync();
+
+
             Console.ReadLine();
         }
 

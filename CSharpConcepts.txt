@@ -16,3 +16,24 @@ Every shared mutable variable must be guarded by some lock. The data may not be 
 If an invariant involves multiple shared mutable variables (which might even be in different objects), then all the variables involved must be guarded by the same lock. Once a thread acquires the lock, the invariant must be reestablished before releasing the lock.
 
 The monitor pattern as used here satisfies both rules. All the shared mutable data in the rep — which the rep invariant depends on — are guarded by the same lock.
+
+
+The difference between ref and out parameters in C# is
+The ref variable must be initialized before passing to a function. 
+Whereas, there is no need to initialize out variable before passing it to function.However, 
+if we initialize out variable before passing to method, there is no harm, but, it is useless, 
+as we must initialize or assigned a value to out variable within the function body.
+
+In real time software projects, we use sealed class and sealed method to stop a developer to extend a class or override a method accidentally. If he does so, C# compiler will flash an error.
+If he really wants to extend or override he can remove the sealed keyword before class or method.
+
+
+Method hiding occurs in inheritance relationship when base class and derived class both have a method with same name. 
+When we create the object of derived class it will hide the base class method and will call its own method and this is called method hiding or name hiding in C# inheritance.
+
+As if we write any constructor in a class, compiler does not provide its default constructor.
+
+So, if we want to create an object of a class without parameter i.e. A obj = new A (). We have to write an empty constructor in the class.
+
+Use private constructor if we need to stop object creation of a class. Note that object can be created of a sealed class.
+To stop extension of a class (independent class, base class or derived class) use sealed class in C

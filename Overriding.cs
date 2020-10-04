@@ -38,4 +38,10 @@ namespace EventHandlerDemo
         public new void Test() { Console.WriteLine("C::Test()"); }
     }
 
+    abstract class E
+    {
+        //public void Method1();
+
+    }
+
 }

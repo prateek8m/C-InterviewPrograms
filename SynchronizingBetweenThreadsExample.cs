@@ -93,6 +93,34 @@ namespace CSharpInterviewPrograms
             }
 
         }
+
+        private static object lockobj = new object();
+        public void printingOddNumbersFromtwothreadsInsync()
+        {
+            Thread t1 = new Thread(printodd);
+            Thread t2 = new Thread(printodd);
+
+            t1.Start();
+            t2.Start();
+            t1.Join();
+            t2.Join();
+
+        }
+
+        public static void  printodd()
+        {
+            lock(lockobj)
+            {
+                for(int i=0;i<10;i++)
+                {
+                    if(i%2!=0)
+                    {
+                        Console.WriteLine(i);
+                    }
+                }
+
+            }
+        }
     }
 
 }
